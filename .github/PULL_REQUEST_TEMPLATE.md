@@ -1,70 +1,57 @@
---- 
-name: Feature / Fix / Refactor PR
-about: Template for submitting code changes to QRSay-QR-Code-Interaction-Mobile-App
-title: '[FEAT/FIX/CHORE]: Descriptive summary of changes'
-labels: needs review
-assignees: chirag127
----
+# Pull Request Template
 
-# 🚀 QRSay: Pull Request - Technical Submission
+## 1. Purpose
 
-Thank you for contributing to the `QRSay-QR-Code-Interaction-Mobile-App` codebase. This template ensures high-velocity, standardized review processes.
+Briefly describe the purpose of this pull request. What problem does it solve or what feature does it add?
 
-## 🎯 Primary Goal of this PR
+## 2. Changes Made
 
-*(In 1-2 sentences, clearly state the problem solved or the feature introduced. Link to the relevant issue if applicable, e.g., Closes #123)*
+*   **High-Level Overview:** Summarize the main code changes.
+*   **Specifics:** Detail key modifications, new files, or removed files.
 
-## 🛠️ Type of Change
+## 3. Architectural Alignment
 
-Please select the most relevant type(s) and remove those that do not apply:
+*   Does this change adhere to the **Apex Tech Stack** (React Native, Expo)?
+*   Are architectural principles like **SOLID**, **DRY**, and **YAGNI** followed?
+*   How does this PR impact the **Feature-Sliced Design (FSD)** or relevant architectural pattern?
 
-- [ ] **Feature:** New user-facing functionality (e.g., adding a new screen, integrating a new QR type).
-- [ ] **Fix:** Non-breaking bug correction (e.g., fixing rendering issues, correcting navigation logic).
-- [ ] **Chore:** Maintenance, configuration updates, or tooling changes (e.g., updating Expo SDK, dependency bumps, CI pipeline fix).
-- [ ] **Refactor:** Code restructuring without changing external behavior (e.g., migrating component state to Zustand, applying Feature-Sliced Design principles).
-- [ ] **Documentation:** Changes to `README.md`, `.github` files, or inline comments.
+## 4. Testing & Verification
 
-## 📝 Required Checklist (Self-Review Mandatory)
+*   **Unit Tests:** Were new unit tests added or existing ones updated?
+*   **Integration Tests:** Were integration tests modified or added?
+*   **E2E Tests:** Were any End-to-End tests affected or created?
+*   **Manual Testing:** Describe any manual testing performed, including steps and expected outcomes.
+*   **Verification Commands:** (If applicable) Provide commands to run tests and verify changes.
 
-Ensure you have completed all mandatory checks before requesting review.
+## 5. Code Quality & Linting
 
-### Code Quality & Standards
-- [ ] My code adheres to the **Apex Technical Standards** (SOLID, DRY, YAGNI) and **TypeScript Strict** mode.
-- [ ] I have ensured component logic uses functional components and hooks appropriately.
-- [ ] I have verified the changes on both **iOS (Simulator)** and **Android (Emulator/Device)**.
-- [ ] All new state management logic utilizes **Zustand** hooks/stores correctly.
-- [ ] Formatting and linting checks (`npx biome check --apply`) pass locally.
+*   Has the code been linted using **Biome/Ruff** (or relevant JS/TS linter)?
+*   Has the code been formatted?
+*   Are there any new linting or formatting issues?
 
-### Testing & Verification
-- [ ] I have added **Vitest** unit tests where applicable (e.g., utility functions, store mutations).
-- [ ] All existing tests pass locally.
-- [ ] I have manually tested the primary user flow impacted by these changes.
-- [ ] I have checked the Expo logs for any critical warnings or performance regressions.
+## 6. Related Issues/Tickets
 
-### Documentation
-- [ ] If this introduces a new environment variable or configuration, I have updated the `.env.example`.
-- [ ] If this affects public API interfaces (internal components), relevant JSDocs have been updated.
+*   Link to any GitHub issues, Jira tickets, or other relevant tracking items.
+    *   Example: Closes #123
+    *   Example: Fixes #456
 
-## 🧩 Technical Implementation Details
+## 7. Screenshots/Recordings
 
-1.  **Affected Modules/Files:** (e.g., `src/features/scanner/ScannerScreen.tsx`, `src/shared/store/qrStore.ts`)
-2.  **Architectural Impact:** (e.g., Did you introduce a new feature slice according to FSD principles?)
-3.  **Key Decisions:** (Explain any non-obvious design choices or trade-offs made.)
+*   (For UI changes) Provide relevant screenshots or short video recordings demonstrating the changes.
 
-## 📸 Screenshots / Visual Proof (Mandatory for UI/UX Changes)
+## 8. Checklist
 
-Please attach screenshots or screen recordings showing the feature working correctly on both platforms (if applicable).
+*   [ ] My code follows the code style of this project.
+*   [ ] I have performed a self-review of my own code.
+*   [ ] I have commented my code, particularly in hard-to-understand areas.
+*   [ ] I have made corresponding changes to the documentation.
+*   [ ] My changes generate no new warnings or errors.
+*   [ ] I have added tests that prove my fix is effective or that my feature works.
+*   [ ] New and existing unit tests pass locally with my changes.
+*   [ ] Any dependent changes have been merged and published in downstream modules.
+*   [ ] I have checked that all **Dynamic URLs** and **Badge Links** correctly point to `https://github.com/chirag127/QRSay-Mobile-Frontend-CrossPlatform-Scanner`.
+*   [ ] All AI Agent Directives in the relevant `AGENTS.md` file are satisfied by this PR.
 
-| iOS Preview | Android Preview |
-| :---: | :---: |
-| *(Attach image/GIF here)* | *(Attach image/GIF here)* |
+## 9. Additional Notes
 
-## 🧪 Testing Instructions for Reviewer
-
-How can the reviewer easily reproduce and verify the successful implementation of this PR?
-
-1.  Checkout this branch: `git checkout <branch-name>`
-2.  Install dependencies: `npm install`
-3.  Start Expo: `npx expo start`
-4.  Navigate to `[Specific Screen/Flow]`.
-5.  Expected Behavior: `[Describe what should happen]`
+*   Any other context or information that might be helpful for the reviewer.
